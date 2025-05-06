@@ -1,0 +1,20 @@
+name: GitHub Actions Demo
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: [.github/**]
+  pull-request: 
+    branches: [main]
+  schedule:
+    - cron: "15 6 * * SUN"
+  workflow_dispatch: 
+
+jobs:  
+  Build:
+    name: Something
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+        - uses: actions/checkout@v4
+        - name: Run script
+        - run: echo "Hello Ripan" > $GITHUB_STEP_SUMMARY
