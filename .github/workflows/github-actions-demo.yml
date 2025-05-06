@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Run script
-      - run: echo "Hello Ripan" > $GITHUB_STEP_SUMMARY
+        run: echo "Hello Ripan" > $GITHUB_STEP_SUMMARY
